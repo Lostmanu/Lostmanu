@@ -87,3 +87,7 @@ is the point of keeping it.
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
   </a>
 </p>
+
+---
+
+<p align="center"><sub>Everything here is unfunded, unaffiliated and not peer reviewed. The register is the honest part.</sub></p>
