@@ -51,9 +51,9 @@ estimate was retired. That is in the repository too, with the dates.
 ## 🔬 quant-system — the laboratory itself
 
 The code, the guards, the preregistrations and the rulings behind that register, published as a sanitised
-snapshot with the SHA-256 of every file. 476 tests; a mutation harness whose 49 rows each break one line of
-a guard and demand that a named test fail; six checks in CI, each reporting on its own. The README opens by
-saying which of those six cannot fail in a repository without history, and why.
+snapshot with the SHA-256 of every file. 476 tests; a mutation harness whose 49 rows each disable a check in
+a guard and demand that a named test fail with its declared marker; six checks in CI, each reporting on its
+own. The README says which two of those six cannot fail today, and why.
 
 **[→ Open the laboratory](https://github.com/Lostmanu/quant-system)**
 
@@ -88,16 +88,16 @@ runs on Inspect, each opened as an issue with the measurement first:
 </p>
 
 Those are the tools the work above actually used: a data collector running unattended on a rented Linux
-server, an analysis tree in Python with 476 tests, and a continuous-integration job that runs six checks in
-72 seconds and fails closed.
+server, an analysis tree in Python with 476 tests, and a continuous-integration job that runs six
+independent checks in under two minutes.
 
 ---
 
 ## 🧪 How I work
 
 - **Preregistration before data.** What counts as success is written and committed before the numbers exist.
-- **Controls that prove they bite.** Every guard has a row that breaks one line of source and requires a
-  named test to fail. If no test fails, the guard is decorative and the harness says so.
+- **Controls that prove they bite.** A harness disables one check at a time and requires a named test to
+  fail with its declared marker. If no test fails, the check is decorative and the harness says so.
 - **The number is not typed by the person reporting it.** A tool emits it with the command that produced it.
 - **The register.** Every claim of mine that turned out to be false gets written down, before it is fixed,
   with who caught it. Including the ones nobody would ever have known about.
