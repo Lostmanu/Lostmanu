@@ -16,8 +16,8 @@
 
 ## 📌 Ninety-Three Wrong Claims
 
-A six-month quantitative research programme on crypto perpetual-futures microstructure. It asked whether a
-slow participant could extract systematic edge, and **it could not**. So I published the other thing it
+A quantitative research programme on crypto perpetual-futures microstructure, versioned from June to
+September 2026. It asked whether a slow participant could extract systematic edge, and **it could not**. So I published the other thing it
 produced: a register of every claim the programme made that later turned out to be false, with the person or
 instrument that caught each one named.
 
@@ -45,6 +45,33 @@ months earlier. All eight of its lenses returned a threat that applies and the v
 estimate was retired. That is in the repository too, with the dates.
 
 **[→ Read the register, the paper and the tool](https://github.com/Lostmanu/ninety-three-wrong-claims)**
+
+---
+
+## 🔬 quant-system — the laboratory itself
+
+The code, the guards, the preregistrations and the rulings behind that register, published as a sanitised
+snapshot with the SHA-256 of every file. 476 tests; a mutation harness whose 49 rows each break one line of
+a guard and demand that a named test fail; six checks in CI, each reporting on its own. The README opens by
+saying which of those six cannot fail in a repository without history, and why.
+
+**[→ Open the laboratory](https://github.com/Lostmanu/quant-system)**
+
+---
+
+## 🤝 Open source
+
+Fixes to [`inspect_evals`](https://github.com/UKGovernmentBEIS/inspect_evals), the evaluation suite that
+runs on Inspect, each opened as an issue with the measurement first:
+
+- [#2489](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2489) · `apps` declared 5,000 samples and
+  loads 3,000 — **merged**
+- [#2491](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2491) · `bbh` scored by suffix match: 8 of
+  the 20 reproduction cases fail on `main` — open
+- [#2490](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2490) · `bbh` declared 250 samples and
+  loads 6,509 — open
+- [#2507](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2507) · `worldsense` kept one trial per
+  tuple, 40,176 of 87,048, and never evaluated a single `FALSE` or `IMPOSSIBLE` — open
 
 ---
 
