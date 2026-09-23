@@ -53,7 +53,7 @@ estimate was retired. That is in the repository too, with the dates.
 The code, the guards, the preregistrations and the rulings behind that register, published as a sanitised
 snapshot with the SHA-256 of every file. 476 tests; a mutation harness whose 49 rows each disable a check in
 a guard and demand that a named test fail with its declared marker; six checks in CI, each reporting on its
-own. The README says which two of those six cannot fail today, and why.
+own. The README says which of those six cannot fail today, and why.
 
 **[→ Open the laboratory](https://github.com/Lostmanu/quant-system)**
 
