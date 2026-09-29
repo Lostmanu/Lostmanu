@@ -36,7 +36,7 @@ Also under discussion with the authors of Google DeepMind's physics-IQ: test vid
 
 ### How I work
 
-I preregister what counts as success before the data exists, and I build controls that have to prove they bite. I work with AI coding agents, and I keep a public record of every claim that turned out to be false, theirs and mine.
+I preregister what counts as success before the data exists, and I build controls that have to prove they bite. I also keep a public record of every claim of mine that turned out to be false.
 
 ---
 
