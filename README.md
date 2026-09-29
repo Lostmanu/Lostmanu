@@ -11,14 +11,22 @@ I read evaluation code next to the benchmark it claims to implement. When a scor
 
 ### Open-source fixes
 
+Five merged across three organisations, three more under review.
+
 | project | what was wrong | status |
 |---|---|---|
 | [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2507) (UK AI Security Institute) | `worldsense` never evaluated a single `FALSE` or `IMPOSSIBLE` answer | **merged** |
-| [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2489) | `apps` declared 5,000 samples and loaded 3,000 | **merged** |
-| [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2491) | `bbh` scored answers by suffix match | open |
-| [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2490) | `bbh` declared 250 samples and loads 6,509 | open |
+| [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2489) (UK AI Security Institute) | `apps` declared 5,000 samples and loaded 3,000 | **merged** |
+| [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2490) (UK AI Security Institute) | `bbh` declared 250 samples and loads 6,509 | **merged** |
+| [gift-eval](https://github.com/SalesforceAIResearch/gift-eval/pull/216) (Salesforce AI Research) | two model-name mismatches hid iTransformer and split Zeus on the leaderboard | **merged** |
+| [evalscope](https://github.com/modelscope/evalscope/pull/1773) (ModelScope) | BBH `dyck_languages` lost its brackets, so correct answers scored as wrong | **merged** |
+| [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2491) (UK AI Security Institute) | `bbh` scored answers by suffix match | open |
 | [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness/pull/4215) (EleutherAI) | BBH few-shot answers of `(Q)` could never score | open |
-| [evalscope](https://github.com/modelscope/evalscope/pull/1773) (ModelScope) | BBH `dyck_languages` lost its brackets | open |
+| [AIOpsLab](https://github.com/microsoft/AIOpsLab/pull/203) (Microsoft) | keyword `submit()` calls were graded as an empty answer | open |
+
+> "Minimal, root-cause fix with well-scoped tests." (evalscope maintainer, reviewing [#1773](https://github.com/modelscope/evalscope/pull/1773))
+
+Also under discussion with the authors of Google DeepMind's physics-IQ: test videos that reuse the first recording ([#84](https://github.com/google-deepmind/physics-IQ-benchmark/issues/84)).
 
 ### Selected work
 
