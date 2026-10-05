@@ -11,7 +11,7 @@ I read evaluation code next to the benchmark it claims to implement. When a scor
 
 ### Open-source fixes
 
-Six merged across four organisations, four more under review.
+Seven merged across five organisations, five more under review.
 
 | project | what was wrong | status |
 |---|---|---|
@@ -21,10 +21,12 @@ Six merged across four organisations, four more under review.
 | [gift-eval](https://github.com/SalesforceAIResearch/gift-eval/pull/216) (Salesforce AI Research) | two model-name mismatches hid iTransformer and split Zeus on the leaderboard | **merged** |
 | [evalscope](https://github.com/modelscope/evalscope/pull/1773) (ModelScope) | BBH `dyck_languages` lost its brackets, so correct answers scored as wrong | **merged** |
 | [kornia](https://github.com/kornia/kornia/pull/5098) (computer vision library) | a module-level cache kept tensors made under `inference_mode` or `torch.export`, which broke later normal calls | **merged** |
+| [mteb](https://github.com/embeddings-benchmark/mteb/pull/5570) (Massive Text Embedding Benchmark) | `NeuCLIR2023Retrieval` ran on the 2022 queries and relevance judgements | **merged** |
 | [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2491) (UK AI Security Institute) | `bbh` scored answers by suffix match | open |
 | [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness/pull/4215) (EleutherAI) | BBH few-shot answers of `(Q)` could never score | open |
 | [AIOpsLab](https://github.com/microsoft/AIOpsLab/pull/203) (Microsoft) | keyword `submit()` calls were graded as an empty answer | open |
 | [physics-IQ](https://github.com/google-deepmind/physics-IQ-benchmark/pull/86) (Google DeepMind) | 40 test videos reuse their first recording without saying so; README note suggested by the first author in [#84](https://github.com/google-deepmind/physics-IQ-benchmark/issues/84) | open |
+| [RULER](https://github.com/NVIDIA/RULER/pull/114) (NVIDIA) | five effective-length entries and one average in the README results table were wrong | open |
 
 > "Minimal, root-cause fix with well-scoped tests." (evalscope maintainer, reviewing [#1773](https://github.com/modelscope/evalscope/pull/1773))
 
