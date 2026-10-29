@@ -11,7 +11,7 @@ I read evaluation code next to the benchmark it claims to implement. When a scor
 
 ### Open-source fixes
 
-Nine merged across seven organisations, five more open.
+Ten merged across eight organisations, seven more open.
 
 | project | what was wrong | status |
 |---|---|---|
@@ -24,11 +24,14 @@ Nine merged across seven organisations, five more open.
 | [mteb](https://github.com/embeddings-benchmark/mteb/pull/5570) (Massive Text Embedding Benchmark) | `NeuCLIR2023Retrieval` ran on the 2022 queries and relevance judgements | **merged** |
 | [physics-IQ](https://github.com/google-deepmind/physics-IQ-benchmark/pull/86) (Google DeepMind) | 40 test videos reuse their first recording, which was not documented; the PR adds a README note (see [#84](https://github.com/google-deepmind/physics-IQ-benchmark/issues/84)) | **merged** |
 | [kumoss](https://github.com/InditexTech/kumoss/pull/319) (Inditex) | drift detection dropped Terraform replacements made with `create_before_destroy`, so a pending replacement could be reported as in sync | **merged** |
+| [evalbench](https://github.com/GoogleCloudPlatform/evalbench/pull/677) (Google Cloud) | result columns with the same name were reduced to the last one, so `set_match` and `exact_match` gave 100 to a query that dropped one of them | **merged** |
 | [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2491) (UK AI Security Institute) | `bbh` scored answers by suffix match | open |
 | [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness/pull/4215) (EleutherAI) | BBH few-shot answers of `(Q)` could never score | open |
 | [AIOpsLab](https://github.com/microsoft/AIOpsLab/pull/203) (Microsoft) | keyword `submit()` calls were graded as an empty answer | open |
 | [RULER](https://github.com/NVIDIA/RULER/pull/114) (NVIDIA) | five effective-length entries in the README results table did not follow the table's own threshold rule | open |
 | [karatetools-oss](https://github.com/InditexTech/karatetools-oss/pull/195) (Inditex) | configuration values containing `$` or `\` were changed or threw an exception | open |
+| [adk-python](https://github.com/google/adk-python/pull/7715) (Google) | `final_response_match_v2` dropped judge verdicts that were not lowercase, such as `Invalid`, so a response that most judge samples called invalid could pass | open |
+| [mseb](https://github.com/google-research/mseb/pull/594) (Google Research) | the Overall leaderboard average counted the inactive Segmentation task as 0, which cut every average to 6/7 of the mean over the active tasks | open |
 
 > "Minimal, root-cause fix with well-scoped tests." (evalscope maintainer, reviewing [#1773](https://github.com/modelscope/evalscope/pull/1773))
 
