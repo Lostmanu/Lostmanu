@@ -11,7 +11,7 @@ I read evaluation code next to the benchmark it claims to implement. When a scor
 
 ### Open-source fixes
 
-Ten merged across eight organisations, seven more open.
+Eleven merged across eight organisations, seven more open.
 
 | project | what was wrong | status |
 |---|---|---|
@@ -25,6 +25,7 @@ Ten merged across eight organisations, seven more open.
 | [physics-IQ](https://github.com/google-deepmind/physics-IQ-benchmark/pull/86) (Google DeepMind) | 40 test videos reuse their first recording, which was not documented; the PR adds a README note (see [#84](https://github.com/google-deepmind/physics-IQ-benchmark/issues/84)) | **merged** |
 | [kumoss](https://github.com/InditexTech/kumoss/pull/319) (Inditex) | drift detection dropped Terraform replacements made with `create_before_destroy`, so a pending replacement could be reported as in sync | **merged** |
 | [evalbench](https://github.com/GoogleCloudPlatform/evalbench/pull/677) (Google Cloud) | result columns with the same name were reduced to the last one, so `set_match` and `exact_match` gave 100 to a query that dropped one of them | **merged** |
+| [cerbia](https://github.com/InditexTech/cerbia/pull/35) (Inditex) | a `SecretScanner` given `extra_patterns` appended them to the shared default list, so every default scanner in the process reported them too | **merged** |
 | [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2491) (UK AI Security Institute) | `bbh` scored answers by suffix match | open |
 | [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness/pull/4215) (EleutherAI) | BBH few-shot answers of `(Q)` could never score | open |
 | [AIOpsLab](https://github.com/microsoft/AIOpsLab/pull/203) (Microsoft) | keyword `submit()` calls were graded as an empty answer | open |
