@@ -11,7 +11,7 @@ I read evaluation code next to the benchmark it claims to implement. When a scor
 
 ### Open-source fixes
 
-Twelve merged across eight organisations, six more open.
+Eighteen merged across nine organisations, six more open.
 
 | project | what was wrong | status |
 |---|---|---|
@@ -27,12 +27,18 @@ Twelve merged across eight organisations, six more open.
 | [evalbench](https://github.com/GoogleCloudPlatform/evalbench/pull/677) (Google Cloud) | result columns with the same name were reduced to the last one, so `set_match` and `exact_match` gave 100 to a query that dropped one of them | **merged** |
 | [cerbia](https://github.com/InditexTech/cerbia/pull/35) (Inditex) | a `SecretScanner` given `extra_patterns` appended them to the shared default list, so every default scanner in the process reported them too | **merged** |
 | [karatetools-oss](https://github.com/InditexTech/karatetools-oss/pull/195) (Inditex) | configuration values containing `$` or `\` were changed or threw an exception | **merged** |
+| [k8s-overcommit-operator](https://github.com/InditexTech/k8s-overcommit-operator/pull/117) (Inditex) | a change that only touched `tolerationSeconds` was treated as no change, so it never reached the managed Deployments | **merged** |
+| [mseb](https://github.com/google-research/mseb/pull/594) (Google Research) | the Overall leaderboard average counted the inactive Segmentation task as 0, which cut every average to 6/7 of the mean over the active tasks | **merged** |
+| [mcp-server-simulator-ios-idb](https://github.com/InditexTech/mcp-server-simulator-ios-idb/pull/90) (Inditex) | `install app` returned a made-up bundle ID built from the file name instead of the one idb reports | **merged** |
+| [evalbench](https://github.com/GoogleCloudPlatform/evalbench/pull/711) (Google Cloud) | two records shared one line in the `bat-interact` example dataset, so the loader failed and the dataset could not be loaded | **merged** |
+| [physics-IQ](https://github.com/google-deepmind/physics-IQ-benchmark/pull/97) (Google DeepMind) | the README example imported the templater module under a different name from the one the script uses, so a new templater was not found, and three folder names did not match the datasets | **merged** |
+| [gh-sherpa](https://github.com/InditexTech/gh-sherpa/pull/206) (Inditex) | cropping a branch name to `max_length` could cut into the issue id, so `GH-1234` became `GH-123` and pointed to another issue; it now warns, and a new `keep_issue_id` option keeps the id whole | **merged** |
 | [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2491) (UK AI Security Institute) | `bbh` scored answers by suffix match | open |
 | [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness/pull/4215) (EleutherAI) | BBH few-shot answers of `(Q)` could never score | open |
 | [AIOpsLab](https://github.com/microsoft/AIOpsLab/pull/203) (Microsoft) | keyword `submit()` calls were graded as an empty answer | open |
 | [RULER](https://github.com/NVIDIA/RULER/pull/114) (NVIDIA) | five effective-length entries in the README results table did not follow the table's own threshold rule | open |
 | [adk-python](https://github.com/google/adk-python/pull/7715) (Google) | `final_response_match_v2` dropped judge verdicts that were not lowercase, such as `Invalid`, so a response that most judge samples called invalid could pass | open |
-| [mseb](https://github.com/google-research/mseb/pull/594) (Google Research) | the Overall leaderboard average counted the inactive Segmentation task as 0, which cut every average to 6/7 of the mean over the active tasks | open |
+| [karatetools-oss](https://github.com/InditexTech/karatetools-oss/pull/272) (Inditex) | the OpenAPI generator stopped with `Duplicate key` when an operation had more than one tag | open |
 
 > "Minimal, root-cause fix with well-scoped tests." (evalscope maintainer, reviewing [#1773](https://github.com/modelscope/evalscope/pull/1773))
 
